@@ -1,0 +1,59 @@
+@import "variables";
+
+$sizes: 0, 2, 5, 10, 15, 30;
+
+@each $size in $sizes {
+    .pad-#{$size}-top {
+        padding-top: #{$size}px;
+    }
+    .pad-#{$size}-right {
+        padding-right: #{$size}px;
+    }
+    .pad-#{$size}-bottom {
+        padding-bottom: #{$size}px;
+    }
+    .pad-#{$size}-left {
+        padding-left: #{$size}px;
+    }
+    .pad-#{$size} {
+        padding: #{$size}px;
+    }
+    .margin-#{$size}-top {
+        margin-top: #{$size}px;
+    }
+    .margin-#{$size}-right {
+        margin-right: #{$size}px;
+    }
+    .margin-#{$size}-bottom {
+        margin-bottom: #{$size}px;
+    }
+    .margin-#{$size}-left {
+        margin-left: #{$size}px;
+    }
+    .margin-#{$size} {
+        margin: #{$size}px;
+    }
+    .spacer-#{$size} {
+        height: #{$size}px;
+    }
+}
+
+.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.btn-default {
+    background-color: $default;
+    border-color: $default;
+    color: $white;
+    &:hover {
+        color: darken($white, $amount: 20)
+    }
+}
+
+.selected {
+    &.btn {
+        background-color: $secondary;
+    }
+}
