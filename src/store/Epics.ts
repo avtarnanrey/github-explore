@@ -30,7 +30,8 @@ const getDataFromAPI = (action$: any) => action$.pipe(
             } else {
                 return [
                     setBio(response),
-                    getRepos(response)
+                    getRepos(response),
+                    errorOccured(null)
                 ]
             }
         }

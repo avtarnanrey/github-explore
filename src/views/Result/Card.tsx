@@ -19,7 +19,7 @@ export const Card = () => {
     }
 
     let repoList = repos ? repos.map(repo =>
-        <div className="col-12 col-md-6">
+        <div key={repo.id} className="col-12 col-md-6">
             <div key={repo.id} className="card">
                 <div className="card-header">
                     {repo.name}
