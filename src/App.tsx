@@ -1,7 +1,6 @@
 import React from 'react';
-import { Header, Search, Spacer } from "./views";
-import { Switch, Route } from "react-router-dom"; 
-import { Result } from "./views/Result";
+import { Route, Switch } from "react-router-dom";
+import { Footer, Header, Result, Search, Spacer } from "./views";
 
 function App() {
   return (
@@ -15,6 +14,7 @@ function App() {
           <Result />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

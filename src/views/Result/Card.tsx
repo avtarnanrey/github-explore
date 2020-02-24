@@ -19,14 +19,14 @@ export const Card = () => {
     }
 
     let repoList = repos ? repos.map(repo =>
-        <div key={repo.id} className="col-12 col-md-6">
+        <div key={repo.id} className="card-item">
             <div key={repo.id} className="card">
                 <div className="card-header">
                     {repo.name}
                 </div>
                 <div className="card-body">
                     <h5 className="card-title">{repo.description}</h5>
-                    <ul className="list-group list-group-flush flex-row justify-content-between margin-15-top">
+                    <ul className="list-group list-group-flush flex-row justify-content-between margin-15-top flex-wrap">
                         <StatItem icon={"code"} value={repo.language} />
                         <StatItem icon={"eye"} value={repo.watchers_count} />
                         <StatItem icon={"thumb-tack"} value={repo.forks_count} />

@@ -1,3 +1,6 @@
+export * from "./Footer";
 export * from "./Header";
-export * from "./Search";
 export * from "./Helpers";
+export * from "./Result";
+export * from "./Search";
+

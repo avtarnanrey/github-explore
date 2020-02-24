@@ -14,3 +14,21 @@
     font-weight: normal;
   }
 }
+
+.card-item {
+  margin-top: 15px;
+  width: 50%;
+  @media #{$media-mobile} {
+    width: 100%;
+  }
+  @media #{$media-tab-desktop} {
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  &:nth-child(even) {
+    padding-left: 7.5px;
+  }
+  &:nth-child(odd) {
+    padding-right: 7.5px;
+  }
+} 

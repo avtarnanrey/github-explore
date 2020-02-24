@@ -9,10 +9,10 @@ export const Bio = () => {
     const bio = useSelector((state: StoreState) => state.bio);
 
     return bio ?
-        <div className="card col-12">
+        <div className="card">
             <img className="card-img-top" src={bio.avatar_url} alt={bio.name} />
             <div className="card-body">
-                <div className="card-text">
+                <div className="card-text table-responsive">
                     <table className="table">
                         <tbody>
                             <tr>
@@ -56,5 +56,5 @@ export const Bio = () => {
                 </div>
             </div>
         </div>
-    : null;
+        : null;
 };

@@ -3,3 +3,22 @@ $primary: #F65158;
 $secondary: #FBDE44FF;
 $default: #28334AFF;
 $white: #FFF;
+
+// Breakpoints
+// Extra small devices (portrait phones, less than 576px)
+$media-mobile: "(max-width: 575.98px)";
+
+// Small devices (landscape phones, 576px and up)
+$media-mobile-landscape: "(min-width: 576px) and (max-width: 767.98px)";
+
+// Medium devices (tablets, 768px and up)
+$media-tab: "(min-width: 768px) and (max-width: 991.98px)";
+
+// Medium tab and up
+$media-tab-desktop: "(min-width: 768px)";
+
+// Large devices (desktops, 992px and up)
+$media-desktop: "(min-width: 992px) and (max-width: 1199.98px)";
+
+// Extra large devices (large desktops, 1200px and up)
+$media-large-desktop: "(min-width: 1200px)";
