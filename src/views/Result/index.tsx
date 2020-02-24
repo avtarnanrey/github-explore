@@ -1,27 +1,27 @@
 import * as React from "react";
-import { Bio } from "./Bio";
-import { Card } from "./Card";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { StoreState } from "../../models";
 import { getData } from "../../store/Actions";
 import { dataStrings } from "../../utils";
-import { StoreState } from "../../models";
+import { Bio } from "./Bio";
+import { Card } from "./Card";
 
-interface ComponentProps {
-}
-
-export const Result = (props: ComponentProps) => {
+export const Result = () => {
     const dispatch = useDispatch();
     const location = useLocation();
     const errors = useSelector((state: StoreState) => state.errors);
+    const searchData = dataStrings(location.pathname);
 
     React.useEffect(() => {
-        dispatch(getData(dataStrings(location.pathname)))
+        dispatch(getData(searchData))
     }, [location.pathname]);
 
     return (
         <div className="container">
+            <div className="row">
+                <h2 className="w-100 text-center margin-30-bottom font-size-18">Result for <span className="font-italic color-secondary">{searchData.searchTerm}</span></h2>
+            </div>
             <div className="row">
                 {
                     Boolean(errors) ?

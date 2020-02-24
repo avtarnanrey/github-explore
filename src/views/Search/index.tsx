@@ -2,8 +2,8 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from "react-router-dom";
 import { ButtonState, DataProps } from "../../models";
+import { dataStrings, mapEnum, toTitleCase } from "../../utils";
 import { Button } from "./Button";
-import { mapEnum, dataStrings, toTitleCase } from "../../utils";
 
 export const Search = () => {
     let history = useHistory();
@@ -11,15 +11,13 @@ export const Search = () => {
     let paths = dataStrings(pathname);
 
     const [selected, setSelected] = React.useState(toTitleCase(paths.type) || ButtonState.USER);
-    const { register, unregister, handleSubmit, setValue, errors } = useForm({ defaultValues: { type: selected }});
+    const { register, handleSubmit, setValue } = useForm({ defaultValues: { type: selected } });
 
     React.useEffect(() => {
         register({ name: 'type' }, { required: true });
-        
-        return () => unregister('type');
-      }, [register]);
+    }, [register]);
 
-    function handleSelection (value: any) {
+    function handleSelection(value: any) {
         setValue("type", value);
         setSelected(value);
     }

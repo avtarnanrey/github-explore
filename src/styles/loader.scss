@@ -1,0 +1,40 @@
+@import "variables";
+$width: 240px;
+$height: 60px;
+
+.loaderContainer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  .loader {
+    position: relative;
+    background: $white;
+    top: calc(50% - #{$height});
+    left: calc(50% - #{$width}/ 2);
+    width: $width;
+    height: $height;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    .spinner {
+      border: 10px solid $default;
+      border-top: 10px solid $primary;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 0.75s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

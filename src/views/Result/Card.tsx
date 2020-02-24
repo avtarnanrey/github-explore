@@ -22,17 +22,17 @@ export const Card = () => {
         <div key={repo.id} className="card-item">
             <div key={repo.id} className="card">
                 <div className="card-header">
-                    {repo.name}
+                    <h3>{repo.name}</h3>
                 </div>
                 <div className="card-body">
-                    <h5 className="card-title">{repo.description}</h5>
+                    {repo.description ? <h4 className="card-title">{repo.description}</h4> : null}
                     <ul className="list-group list-group-flush flex-row justify-content-between margin-15-top flex-wrap">
                         <StatItem icon={"code"} value={repo.language} />
                         <StatItem icon={"eye"} value={repo.watchers_count} />
                         <StatItem icon={"thumb-tack"} value={repo.forks_count} />
                         <StatItem icon={"star"} value={repo.stargazers_count} />
                     </ul>
-                    <a href={repo.html_url} className="btn btn-primary margin-15-top" target="_blank">View on Github</a>
+                    <a href={repo.html_url} rel="noopener noreferrer" className="btn btn-primary margin-15-top" target="_blank">View on Github</a>
                 </div>
             </div>
         </div>

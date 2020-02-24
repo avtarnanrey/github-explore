@@ -12,7 +12,7 @@ export const Footer: React.FC<any> = () => {
                         <p className="m-0">Copyright</p>
                     </div>
                     <div className="col-sm">
-                        <a href="#" target="_blank" className="btn btn-link col-12 col-sm-auto d-sm-block float-sm-right">Footer link</a>
+                        <a href="http://google.com" target="_blank" rel="noopener noreferrer" className="btn btn-link col-12 col-sm-auto d-sm-block float-sm-right">Footer link</a>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
-import { Footer, Header, Result, Search, Spacer } from "./views";
+import { Footer, Header, Loader, Result, Search, Spacer } from "./views";
 
 function App() {
   return (
-    <div className="App">
+    <main className="App" id="main-content">
       <Header />
       <Spacer height={100} />
       <Search />
@@ -14,8 +14,9 @@ function App() {
           <Result />
         </Route>
       </Switch>
+      <Loader />
       <Footer />
-    </div>
+    </main>
   );
 }
 

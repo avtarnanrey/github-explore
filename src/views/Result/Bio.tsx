@@ -2,15 +2,12 @@ import * as React from "react";
 import { useSelector } from "react-redux";
 import { StoreState } from "../../models";
 
-interface ComponentProps {
-}
-
 export const Bio = () => {
     const bio = useSelector((state: StoreState) => state.bio);
 
     return bio ?
         <div className="card">
-            <img className="card-img-top" src={bio.avatar_url} alt={bio.name} />
+            <img className="card-img-top" src={bio.avatar_url} alt={"avatar - " + bio.name} />
             <div className="card-body">
                 <div className="card-text table-responsive">
                     <table className="table">
